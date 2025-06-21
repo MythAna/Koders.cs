@@ -1,0 +1,33 @@
+# Logs (noisy stuff we don't want in version control)
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Build output
+dist
+dist-ssr
+*.local   # temp overrides or local-only configs
+
+# Dependencies
+node_modules
+
+# VS Code settings — keeping extensions but ignoring the rest
+.vscode/*
+!.vscode/extensions.json
+
+# JetBrains / WebStorm stuff
+.idea
+
+# Mac & Windows cruft
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?  # swap files (VSCode sometimes leaves these)
+
+# Might add `.env` here if needed later
