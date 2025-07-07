@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tutors | Koders.cs</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="home-header">
+    <div class="container">
+      <a href="index.html" class="logo">Koders.cs</a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="volunteer.html">Volunteer</a></li>
+          <li><a href="forum.html" class="current-page">Tutors</a></li>
+          <li><a href="opportunities.html">Opportunities</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero-box small-hero">
+    <div class="hero-circle-1"></div>
+    <div class="hero-circle-2"></div>
+    <div class="hero-circle-3"></div>
+    <div class="hero-circle-4"></div>
+    <div class="hero-circle-5"></div>
+    <h1 class="gradient-text">Find a Tutor</h1>
+    <p class="subtitle">Need help with Computer Science or AP classes?<br>Browse the list below to find a volunteer tutor who can support you for free.</p>
+  </section>
+
+  <section class="alt-section light">
+    <h2 class="section-title">Available Tutors</h2>
+    <div class="volunteer-forum">
+      <div class="volunteer-block">
+        <p>Coming soon...</p>
+      </div>
+      <div class="volunteer-block">
+        <p>Coming soon...</p>
+      </div>
+      <div class="volunteer-block">
+        <p>Coming soon...</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="home-footer">
+    <p>&copy; 2025 Koders.cs. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Trigger animations on page load
+    document.addEventListener('DOMContentLoaded', function() {
+      // Add animation classes to elements
+      const animatedElements = document.querySelectorAll('.gradient-text, .subtitle, .forum-button, .section-title, .section-description, .stat-box, .tutor-card, .testimonial, .volunteer-subtitle, .volunteer-steps, .volunteer-note, .usage-item, .bonus-item, .instagram-button, .logo, nav ul li, .home-footer, .volunteer-block');
+      
+      animatedElements.forEach(element => {
+        element.style.opacity = '0';
+        element.style.transform = 'translateY(30px)';
+      });
+
+      // Trigger animations with delays
+      setTimeout(() => {
+        animatedElements.forEach(element => {
+          element.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
+          element.style.opacity = '1';
+          element.style.transform = 'translateY(0)';
+        });
+      }, 100);
+    });
+
+    // Smooth page transitions
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetPage = this.getAttribute('href');
+        
+        // Add fade out effect
+        document.body.style.transition = 'opacity 0.3s ease-out';
+        document.body.style.opacity = '0';
+        
+        setTimeout(() => {
+          window.location.href = targetPage;
+        }, 300);
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volunteer | Koders.cs</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="home-header">
+    <div class="container">
+      <a href="index.html" class="logo">Koders.cs</a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="volunteer.html" class="current-page">Volunteer</a></li>
+          <li><a href="forum.html">Tutors</a></li>
+          <li><a href="opportunities.html">Opportunities</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero-box small-hero">
+    <div class="hero-circle-1"></div>
+    <div class="hero-circle-2"></div>
+    <div class="hero-circle-3"></div>
+    <div class="hero-circle-4"></div>
+    <div class="hero-circle-5"></div>
+    <h1 class="gradient-text">Volunteer With Us</h1>
+    <p class="subtitle">Join our mission to make computer science more accessible and inclusive. Whether you love teaching, writing, or creating — there's a place for you at Koders.cs.</p>
+  </section>
+
+  <section class="alt-section light">
+    <h2 class="section-title">Option 1: Tutor Students</h2>
+    <h3 class="volunteer-subtitle">Teach Students</h3>
+    <p class="section-description">Become a volunteer tutor and support students who want to learn computer science. Help them understand challenging concepts, build confidence, and reach their academic goals — all while making learning fun and meaningful.</p>
+    
+    <div class="volunteer-steps">
+      <h4>How to Get Started:</h4>
+      <p>Head over to our Forum, introduce yourself, list the subjects you can help with (like AP CS, Python, math, etc.), and share your contact info so students can connect with you.</p>
+    </div>
+    
+    <a href="forum.html" class="forum-button">Tutor Intern Sign Up Forum</a>
+  </section>
+
+  <section class="alt-section dark">
+    <h2 class="section-title">Option 2: Create Computer Science + Tech Posts</h2>
+    <h3 class="volunteer-subtitle">Share Knowledge, Inspire Curiosity</h3>
+    <p class="section-description">Write fun, digestible posts that explain coding concepts or computer science topics for our blog and social media. Help students get excited about computer science in ways that are clear, engaging, and easy to understand.</p>
+    
+    <div class="volunteer-note">
+      <p><strong>Into design?</strong><br>You can also create graphics or visuals to go along with our computer science posts!</p>
+      <a href="forum.html" class="forum-button">Graphic Design Intern Sign Up Forum</a>
+    </div>
+  </section>
+
+  <section class="alt-section light">
+    <h2 class="section-title">Option 3: Social Media Video Intern</h2>
+    <h3 class="volunteer-subtitle">Make an Impact with Short-Form Video</h3>
+    <p class="section-description">Love creating Reels or TikToks? Join us as a video intern! You'll help us spread computer science awareness and highlight cool topics or role models in tech — all through short, creative videos.</p>
+    
+    <a href="forum.html" class="forum-button">Video Content Creator Intern Forum</a>
+  </section>
+
+  <section class="alt-section dark">
+    <div class="volunteer-cta">
+      <h2 class="section-title">Want to help in a different way?</h2>
+      <p class="section-description">We're always open to new ideas! Just reach out and let's chat 💬</p>
+      <p class="section-description" style="margin-top: 10px;"><strong>Email:</strong> koders.cs@gmail.com</p>
+    </div>
+  </section>
+
+  <footer class="home-footer">
+    <p>&copy; 2025 Koders.cs. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Trigger animations on page load
+    document.addEventListener('DOMContentLoaded', function() {
+      // Add animation classes to elements
+      const animatedElements = document.querySelectorAll('.gradient-text, .subtitle, .forum-button, .section-title, .section-description, .stat-box, .tutor-card, .testimonial, .volunteer-subtitle, .volunteer-steps, .volunteer-note, .usage-item, .bonus-item, .instagram-button, .logo, nav ul li, .home-footer');
+      
+      animatedElements.forEach(element => {
+        element.style.opacity = '0';
+        element.style.transform = 'translateY(30px)';
+      });
+
+      // Trigger animations with delays
+      setTimeout(() => {
+        animatedElements.forEach(element => {
+          element.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
+          element.style.opacity = '1';
+          element.style.transform = 'translateY(0)';
+        });
+      }, 100);
+    });
+
+    // Smooth page transitions
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetPage = this.getAttribute('href');
+        
+        // Add fade out effect
+        document.body.style.transition = 'opacity 0.3s ease-out';
+        document.body.style.opacity = '0';
+        
+        setTimeout(() => {
+          window.location.href = targetPage;
+        }, 300);
+      });
+    });
+  </script>
+</body>
+</html>

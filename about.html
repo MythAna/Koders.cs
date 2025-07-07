@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Koders.cs | Empowering Future Coders</title>
+  <title>About | Koders.cs</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -13,90 +13,68 @@
       <a href="index.html" class="logo">Koders.cs</a>
       <nav>
         <ul>
-          <li><a href="index.html" class="current-page">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="volunteer.html">Volunteer</a></li>
           <li><a href="forum.html">Tutors</a></li>
           <li><a href="opportunities.html">Opportunities</a></li>
-          <li><a href="about.html">About</a></li>
+          <li><a href="about.html" class="current-page">About</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <section class="hero-box">
+  <section class="hero-box small-hero">
     <div class="hero-circle-1"></div>
     <div class="hero-circle-2"></div>
     <div class="hero-circle-3"></div>
     <div class="hero-circle-4"></div>
     <div class="hero-circle-5"></div>
-    <h1 class="gradient-text">Free Computer Science Tutoring for Youth</h1>
-    <p class="subtitle">Koders.cs provides free tutoring and mentorship to youth—especially those interested in computer science—empowering them to succeed in computer science subjects and AP-level courses through guidance, community, and opportunity.</p>
-    <div class="hero-buttons">
-      <a href="volunteer.html" class="forum-button">Become a Tutor</a>
-      <a href="forum.html" class="forum-button">Find a Tutor</a>
-      <a href="volunteer.html" class="forum-button">Request Volunteer Hours</a>
-    </div>
+    <h1 class="gradient-text">About Koders.cs</h1>
+    <p class="subtitle">Learn about our mission to make computer science education accessible to all.</p>
   </section>
 
   <section class="alt-section light">
-    <div class="stats-container">
-      <div class="stat-box">
-        <div class="icon">👩‍🎓</div>
-        <h2>0+</h2>
-        <p>Students Impacted</p>
-      </div>
-      <div class="stat-box">
-        <div class="icon">💻</div>
-        <h2>0+</h2>
-        <p>Computer Science Opportunities Shared</p>
-      </div>
-      <div class="stat-box">
-        <div class="icon">📅</div>
-        <h2>0+</h2>
-        <p>Workshops & Events</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="alt-section dark">
     <h2 class="section-title">Our Mission</h2>
     <p class="section-description">At Koders.cs, we are committed to breaking educational barriers by offering free computer science tutoring, academic support, and mentorship to youth—especially students pursuing advanced computer science courses—so they can develop real-world skills and pursue tech careers with confidence and access.</p>
   </section>
 
-  <section class="alt-section light">
-    <h2 class="section-title">Highlighted Volunteer Tutors</h2>
-    <div class="tutors-container">
-      <div class="tutor-card">
-        <p>Coming soon...</p>
-      </div>
-      <div class="tutor-card">
-        <p>Coming soon...</p>
-      </div>
-      <div class="tutor-card">
-        <p>Coming soon...</p>
-      </div>
-    </div>
-  </section>
-
   <section class="alt-section dark">
-    <h2 class="section-title">What Students Are Saying</h2>
-    <div class="testimonials">
-      <div class="testimonial">
-        <p>Coming soon...</p>
+    <h2 class="section-title">What We Do</h2>
+    <div class="mission-points">
+      <div class="mission-point">
+        <h3>Free Computer Science Tutoring</h3>
       </div>
-      <div class="testimonial">
-        <p>Coming soon...</p>
+      <div class="mission-point">
+        <h3>Academic Support & Mentorship</h3>
       </div>
-      <div class="testimonial">
-        <p>Coming soon...</p>
+      <div class="mission-point">
+        <h3>Community Building</h3>
+      </div>
+      <div class="mission-point">
+        <h3>Career Guidance</h3>
+      </div>
+      <div class="mission-point">
+        <h3>Resource Sharing</h3>
+      </div>
+      <div class="mission-point">
+        <h3>Skill Development</h3>
       </div>
     </div>
   </section>
 
   <section class="alt-section light">
-    <h2 class="section-title">Follow Us on Instagram</h2>
-    <p class="section-description">@koders.cs — See our latest impact stories and tech highlights.</p>
-    <a class="instagram-button" href="https://www.instagram.com/koders.cs/" target="_blank">Visit Our Instagram</a>
+    <h2 class="section-title">Who We Are</h2>
+    <div class="who-we-are">
+      <div class="identity-card">
+        <h3>Passionate Educators</h3>
+      </div>
+      <div class="identity-card">
+        <h3>Tech Enthusiasts</h3>
+      </div>
+      <div class="identity-card">
+        <h3>Community Builders</h3>
+      </div>
+    </div>
   </section>
 
   <footer class="home-footer">
@@ -107,7 +85,7 @@
     // Trigger animations on page load
     document.addEventListener('DOMContentLoaded', function() {
       // Add animation classes to elements
-      const animatedElements = document.querySelectorAll('.gradient-text, .subtitle, .forum-button, .section-title, .section-description, .stat-box, .tutor-card, .testimonial, .volunteer-subtitle, .volunteer-steps, .volunteer-note, .usage-item, .bonus-item, .instagram-button, .logo, nav ul li, .home-footer');
+      const animatedElements = document.querySelectorAll('.gradient-text, .subtitle, .forum-button, .section-title, .section-description, .stat-box, .tutor-card, .testimonial, .volunteer-subtitle, .volunteer-steps, .volunteer-note, .usage-item, .bonus-item, .instagram-button, .logo, nav ul li, .home-footer, .mission-point, .identity-card');
       
       animatedElements.forEach(element => {
         element.style.opacity = '0';
