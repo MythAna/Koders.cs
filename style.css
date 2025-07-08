@@ -639,7 +639,8 @@ nav a:hover::after {
   border-color: var(--accent-green);
 }
 
-.volunteer-steps h4 {
+.volunteer-steps h4,
+.volunteer-note h4 {
   color: var(--dark-green);
   margin-bottom: 16px;
   font-size: 20px;
@@ -664,6 +665,70 @@ nav a:hover::after {
   transform: translateY(-5px);
   box-shadow: 0 15px 35px rgba(45, 90, 61, 0.15);
   border-color: var(--accent-green);
+}
+
+.announcement-box {
+  background: linear-gradient(135deg, var(--light-green) 0%, var(--soft-green) 100%);
+  border: 2px solid var(--dark-green);
+  border-radius: 12px;
+  padding: 24px;
+  margin: 30px 0;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(45, 90, 61, 0.15);
+}
+
+.announcement-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(45, 90, 61, 0.2);
+  border-color: var(--accent-green);
+}
+
+.announcement-box p {
+  margin: 8px 0;
+  color: var(--text-dark);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.announcement-title {
+  color: var(--dark-green);
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.announcement-box p:first-child {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+
+
+.instagram-icon {
+  font-size: 18px;
+  vertical-align: middle;
+}
+
+.down-arrow {
+  font-size: 24px;
+  font-weight: bold;
+  animation: bounce 2s infinite;
+  display: inline-block;
+  color: #dc3545;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
 }
 
 .volunteer-button {
@@ -1133,6 +1198,17 @@ footer.home-footer {
   font-size: 16px;
   margin-top: auto;
   width: 100%;
+}
+
+footer.home-footer p:first-child {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+footer.home-footer p:last-child {
+  font-size: 14px;
+  opacity: 0.9;
 }
 
 /* === Filter Section === */
