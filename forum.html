@@ -36,15 +36,29 @@
 
   <section class="alt-section light">
     <h2 class="section-title">Available Tutors</h2>
+    <!-- Filter Section -->
+    <div class="filter-section">
+      <h3 class="filter-title">🔎 Filter Tutors</h3>
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="cs">Computer Science</button>
+        <button class="filter-btn" data-filter="stem">STEM</button>
+        <button class="filter-btn" data-filter="ap">AP courses</button>
+        <button class="filter-btn" data-filter="highschool">Highschool courses</button>
+      </div>
+    </div>
     <div class="volunteer-forum">
-      <div class="volunteer-block">
-        <p>Coming soon...</p>
+      <div class="volunteer-block" data-category="cs">
+        <p>Coming soon... (Computer Science)</p>
       </div>
-      <div class="volunteer-block">
-        <p>Coming soon...</p>
+      <div class="volunteer-block" data-category="stem">
+        <p>Coming soon... (STEM)</p>
       </div>
-      <div class="volunteer-block">
-        <p>Coming soon...</p>
+      <div class="volunteer-block" data-category="ap">
+        <p>Coming soon... (AP courses)</p>
+      </div>
+      <div class="volunteer-block" data-category="highschool">
+        <p>Coming soon... (Highschool courses)</p>
       </div>
     </div>
   </section>
@@ -73,6 +87,40 @@
           element.style.transform = 'translateY(0)';
         });
       }, 100);
+    });
+
+    // Tutor filter functionality
+    const tutorFilterButtons = document.querySelectorAll('.filter-section .filter-btn');
+    const tutorCards = document.querySelectorAll('.volunteer-block');
+
+    // Initialize all cards as visible
+    tutorCards.forEach(card => {
+      card.classList.add('filtered-in');
+      card.classList.remove('filtered-out');
+    });
+
+    tutorFilterButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        // Remove active class from all buttons
+        tutorFilterButtons.forEach(btn => btn.classList.remove('active'));
+        // Add active class to clicked button
+        this.classList.add('active');
+
+        const filterValue = this.getAttribute('data-filter');
+
+        tutorCards.forEach(card => {
+          const cardCategory = card.getAttribute('data-category');
+          if (filterValue === 'all' || cardCategory === filterValue) {
+            card.classList.remove('filtered-out');
+            card.classList.add('filtered-in');
+            card.style.display = '';
+          } else {
+            card.classList.remove('filtered-in');
+            card.classList.add('filtered-out');
+            card.style.display = 'none';
+          }
+        });
+      });
     });
 
     // Smooth page transitions
